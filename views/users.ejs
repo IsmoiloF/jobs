@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head.ejs") %>
+    <body>
+        <%- include("./partials/nav.ejs") %>
+        <h3><a href="/add-user">Yangi yusher qo'shish</a></h3>
+        <!-- <h1>USERS:</h1> -->
+        <ol>
+            <% users.forEach((user)=>{ %>
+                <li>
+                    <a href="/user/<%= user.id %>">
+                        <span><%= user.username %></span> - <%= user.email%>
+                    </a>
+                </li>
+              <!-- <li><%= user.username %> - <%= user.email %> - <%= user.name %></li> -->
+              <% })%>
+        </ol>
+    </body>
+</html>

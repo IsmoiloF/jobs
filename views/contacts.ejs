@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head.ejs") %>
+    <body>
+        <%- include("./partials/nav.ejs") %>
+        <% contacts.forEach((contact) => { %>
+            <h1><a href="<%= contact.url %> "><%= contact.name%></a></h1>
+        <% }); %> 
+    </body>
+</html>

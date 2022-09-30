@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head.ejs") %>
+    <body>
+        <%- include("./partials/nav.ejs") %>
+        <h1>Tahrirlash user</h1>
+        <form action="/edit/<%= user.id %>?_method=PUT" method="post" id="post-form">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" value="<%= user.name %>"><br><br>
+            <label for="username">User name</label>
+            <input type="text" name="username" id="username" value="<%= user.username %>"><br><br>
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" value="<%= user.email %>"><br><br>
+            <label for="phone">Phone</label>
+            <input type="text" name="phone" id="phone"  value="<%= user.phone %>"><br><br>
+            <button type="submit" >Saqlash</button>
+        </form>
+    </body>
+</html>
+
+
